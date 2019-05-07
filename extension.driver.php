@@ -12,7 +12,7 @@ class Extension_Tracker extends Extension
         return array(
             array(
                 'location'	=> __('System'),
-                'name'		=> __('Tracker Activity'),
+                'name'		=> __('Activity Tracker'),
                 'link'		=> '/',
                 'limit'		=> $group
             )
@@ -915,7 +915,7 @@ class Extension_Tracker extends Extension
 
     public function dashboardPanelTypes($context)
     {
-        $context['types']['tracker_activity'] = "Tracker Activity";
+        $context['types']['tracker_activity'] = "Activity Tracker";
     }
 
     public function dashboardPanelOptions($context)
@@ -927,7 +927,7 @@ class Extension_Tracker extends Extension
             case 'tracker_activity':
 
                 $fieldset = new XMLElement('fieldset', null, array('class' => 'settings'));
-                $fieldset->appendChild(new XMLElement('legend', __('Tracker Activity')));
+                $fieldset->appendChild(new XMLElement('legend', __('Activity Tracker')));
 
                 $label = Widget::Label(__('Limit'), Widget::Input('config[limit]', $config['limit']));
                 $fieldset->appendChild($label);
