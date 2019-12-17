@@ -127,7 +127,7 @@ class contentExtensionTrackerIndex extends contentBlueprintsPages
             Widget::TableBody($tbody), 'selectable', null,
             array('role' => 'directory', 'aria-labelledby' => 'symphony-subheading', 'data-interactive' => 'data-interactive')
         );
-        $this->Form->appendChild($table);
+        $this->Primary->appendChild($table);
 
         // Append table actions, if developer
         if (Tracker::Author()->isDeveloper()) {
@@ -139,7 +139,7 @@ class contentExtensionTrackerIndex extends contentBlueprintsPages
             $tableActions = new XMLElement('div');
             $tableActions->setAttribute('class', 'actions');
             $tableActions->appendChild(Widget::Apply($options));
-            $this->Form->appendChild($tableActions);
+            $this->Primary->appendChild($tableActions);
         }
 
         // Append pagination
@@ -196,7 +196,7 @@ class contentExtensionTrackerIndex extends contentBlueprintsPages
             else $li->setValue(__('Last'));
             $ul->appendChild($li);
 
-            // $this->Form->appendChild($ul);
+            // $this->Primary->appendChild($ul);
         }
     }
 
